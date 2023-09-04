@@ -1,0 +1,66 @@
+@import '../../../variables.scss';
+
+.perfomance-bar {
+    width: 90%;
+    margin: 150px auto;
+    margin-top: 55px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    @media only screen and (max-width: 480px) {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+        position: relative !important;
+        z-index: -1;
+    }
+
+    @media only screen and (min-width: 481px) and  (max-width: 820px){
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    &-item {
+        text-align: center;
+        width: 250px;
+        margin:10px;
+
+        &-count{
+            font-weight: 700;
+            color: $orangeColor;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+            font-size: 50px;
+
+            @media only screen and (max-width: 480px) {
+                font-size: 25px;
+            }
+            @media only screen and (min-width: 481px) and  (max-width: 820px){
+                font-size: 34px;
+                text-align: center;
+            }
+        }
+        p {
+
+            @media only screen and (max-width: 480px) {
+                font-size: 9px;
+                text-align: center;
+            }
+
+            @media only screen and (min-width: 481px) and  (max-width: 820px){
+                font-size: 14px;
+                text-align: center;
+            }
+            font-weight: 700;
+            font-size: 17px;
+            color: #4B4B4B;
+            margin: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+    }
+}

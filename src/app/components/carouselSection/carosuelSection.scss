@@ -1,0 +1,118 @@
+@import '../../variables.scss';
+
+.carouselSection {
+    width: 85%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 480px) {
+        width: 80%;
+    }
+    .slick-slide>div {padding: 10px 10px;}
+
+    &-title {
+        text-align: center;
+        @media only screen and (min-width: 900px) {
+            margin-bottom: 60px !important;
+        }
+    }
+
+    &-slide {
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+
+        img {
+            object-fit: cover;
+            height: 300px;
+            border-radius: 10px 10px 0 0;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        &-text {
+
+            @media only screen and (max-width: 480px) {
+                font-size:20px;
+            }
+
+            @media only screen and (min-width: 481px) and (max-width: 900px) {
+                font-size: 28px;
+                height: 170px;
+            }
+            text-align: center;
+            width: 100%;
+            color: #fff;
+            padding: 10px;
+            font-size:28px;
+            height: 100px;
+            background-color: #954580;
+            border-radius: 0 0 20px 20px;
+
+        }
+    }
+    .slick-prev, .slick-next {
+        background-color: $primaryColorRGB !important;
+        color: rgba($primaryColorRGB, 0.5) !important;
+    }
+
+    &-modal {
+        display: flex;
+        flex-direction: row;
+
+        @media only screen and (max-width: 480px) {
+            flex-direction: column;
+        }
+
+        img {
+            border-radius: 10px;
+            height: 500px;
+            width: 50%;
+            object-fit: cover;
+
+            @media only screen and (max-width: 480px) {
+                height: 200px;
+                width: 100%;
+            }
+        }
+        &-content {
+            position: relative;
+            padding: 20px;
+
+            @media only screen and (max-width: 480px) {
+                padding: 8px;
+            }
+
+            &-header {
+                font-size: 26px;
+                text-align: center;
+                color: $font_header_color;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+
+                @media only screen and (max-width: 480px) {
+                  font-size: 22px;
+                  margin-top: 10px;
+                   margin-bottom: 20px;
+                }
+            }
+
+            &-text {
+                height: 310px;
+                font-size: 16px;
+                 @media only screen and (max-width: 480px) {
+                    height: 220px;
+                }
+            }
+
+            &-button {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+}

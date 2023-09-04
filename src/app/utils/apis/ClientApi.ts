@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios'
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
-const TOKEN = process.env.REACT_APP_API_TOKEN;
+const BASE_URL = process.env.BASE_URL;
+const TOKEN = process.env.API_TOKEN;
 
 
 const getAllClients = async () => {
